@@ -1,14 +1,18 @@
 .App {
   text-align: left;
-  margin: 20px;
+  margin: 0px;
   line-height: 30px;
+  text-align: center;
+  background-color: black;
+  color: red;
 }
 
 input[type=string] {
   padding: 5px;
   margin-bottom: 5px;
   font-size: inherit;
-  width: 100%;
+  width: 75%;
+  background-color:azure;
 }
 
 button[type=submit] {
