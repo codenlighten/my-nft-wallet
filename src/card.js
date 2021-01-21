@@ -1,19 +1,22 @@
 import './card.css';
 import React from 'react';
 
-export default ({ artwork }) => {
+export default ({nft}) => {
   const handleClick = () => {
-    const publicKey = prompt("Please enter the public key of the new owner")
-    if(publicKey) artwork.setOwner(publicKey)
-  }
+    const publicKey = prompt ('Please enter the public key of the new owner');
+    if (publicKey) nft.setOwner (publicKey);
+  };
 
-  return artwork
-    ? (<div className="card" onClick={handleClick}>
-        <img src={artwork.url || artwork.imageUrl} alt={artwork.title} />
+  return nft
+    ? <div className="card" onClick={handleClick}>
+        <img src={nft.url || nft.imageUrl} alt={nft.title} />
         <div className="container">
-          <b>{artwork.title}</b><br />
-          {artwork.artist}<br />
+          <br />
+          Issuer: {nft.issuer}<br />
+          Title: <b>{nft.title}</b>
+          <br />
+          {nft.description}<br />
         </div>
-      </div>)
-    : <div></div>
-}
+      </div>
+    : <div />;
+};

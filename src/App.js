@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react';
 import Computer from 'bitcoin-computer';
 import './App.css';
 import Card from './card';
-import Artwork from './artwork';
+import NFT from './artwork';
 
 function App () {
   const [computer, setComputer] = useState (
     new Computer ({
-      seed: 'ugly desk like kite transfer crazy bid twin laugh quiz amused pill',
+      seed: 'egg never curtain develop lake physical ability capital welcome under sea tattoo',
       chain: 'BSV',
       network: 'testnet',
     })
@@ -21,7 +21,7 @@ function App () {
   const [issuer, setIssuer] = useState ('');
 
   const [revs, setRevs] = useState ([]);
-  const [artworks, setArtworks] = useState ([]);
+  const [nfts, setNFTs] = useState ([]);
   const [refresh, setRefresh] = useState (0);
 
   useEffect (
@@ -38,28 +38,23 @@ function App () {
 
   useEffect (
     () => {
-      const fetchArtworks = async () => {
-        setArtworks (
+      const fetchNFTs = async () => {
+        setNFTs (
           await Promise.all (revs.map (async rev => computer.sync (rev)))
         );
       };
-      fetchArtworks ();
+      fetchNFTs ();
     },
     [revs, computer]
   );
 
   useEffect (() => console.log ('revs', revs), [revs]);
-  useEffect (() => console.log ('artworks', artworks), [artworks]);
+  useEffect (() => console.log ('nfts', nfts), [nfts]);
 
   const handleSubmit = async evt => {
     evt.preventDefault ();
-    const artwork = await computer.new (Artwork, [
-      title,
-      description,
-      url,
-      issuer,
-    ]);
-    console.log ('created artwork', artwork);
+    const nft = await computer.new (NFT, [issuer, title, description, url]);
+    console.log ('created nft', nft);
   };
 
   return (
@@ -120,8 +115,8 @@ function App () {
 
       <h2>Your NFT's</h2>
       <ul className="flex-container">
-        {artworks.map (artwork => (
-          <Card artwork={artwork} key={artwork.title + artwork.artist} />
+        {nfts.map (nft => (
+          <Card nft={nft} key={nft.issuer + nft.title + nft.artist} />
         ))}
 
       </ul>

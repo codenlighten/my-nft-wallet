@@ -1,11 +1,12 @@
-export default class Artwork {
-  constructor(title, artist, url) {
-    this.title = title
-    this.artist = artist
-    this.url = url
+export default class NFT {
+  constructor (issuer, title, description, url) {
+    this.issuer = issuer;
+    this.title = title;
+    this.description = description;
+    this.url = url;
   }
 
-  setOwner(owner) {
-    this._owners = [owner]
+  setOwner (owner) {
+    this._owners = [owner];
   }
 }
