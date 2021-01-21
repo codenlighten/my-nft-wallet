@@ -5,8 +5,9 @@
   text-align: center;
   background-color: black;
   color: red;
-}
 
+}
+h1{color:blue; font-size: 4rem;}
 input[type=string] {
   padding: 5px;
   margin-bottom: 5px;

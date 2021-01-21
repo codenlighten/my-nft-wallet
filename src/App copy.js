@@ -12,7 +12,6 @@ function App () {
       network: 'testnet',
     })
   );
-
   const [balance, setBalance] = useState (0);
 
   const [title, setTitle] = useState ('');
@@ -64,9 +63,8 @@ function App () {
 
   return (
     <div className="App">
-      <h1>DappToken</h1>
-      <h4>powered by BitcoinComputer</h4>
-      <h3>My Wallet</h3>
+      <h1>DappToken.io</h1><h2>powered by BitcoinComputer</h2>
+      <h2>Wallet</h2>
       <b>Address</b>&nbsp;{computer.db.wallet.getAddress ().toString ()}<br />
       <b>Public Key</b>
       &nbsp;
