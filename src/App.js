@@ -7,7 +7,7 @@ import NFT from './artwork';
 function App () {
   const [computer, setComputer] = useState (
     new Computer ({
-      seed: 'egg never curtain develop lake physical ability capital welcome under sea tattoo',
+      seed: 'view play hello artwork vital duck sad game gate dish talk pause',
       chain: 'BSV',
       network: 'testnet',
     })
