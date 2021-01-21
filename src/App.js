@@ -7,7 +7,7 @@ import NFT from './artwork';
 function App () {
   const [computer, setComputer] = useState (
     new Computer ({
-      seed: 'view play hello artwork vital duck sad game gate dish talk pause',
+      seed: 'egg never curtain develop lake physical ability capital welcome under sea tattoo',
       chain: 'BSV',
       network: 'testnet',
     })
@@ -59,9 +59,9 @@ function App () {
 
   return (
     <div className="App">
-      <h1>DappToken</h1>
-      <h4>powered by BitcoinComputer</h4>
-      <h3>My Wallet</h3>
+      <h1>NFT Creator</h1>
+      <h4>powered by <a href="bitcoincomputer.io">BitcoinComputer!</a></h4>
+      <h2>My Wallet</h2>
       <b>Address</b>&nbsp;{computer.db.wallet.getAddress ().toString ()}<br />
       <b>Public Key</b>
       &nbsp;

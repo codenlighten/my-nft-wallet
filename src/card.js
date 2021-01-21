@@ -15,7 +15,7 @@ export default ({nft}) => {
           Issuer: {nft.issuer}<br />
           Title: <b>{nft.title}</b>
           <br />
-          {nft.description}<br />
+          Description: {nft.description}<br />
         </div>
       </div>
     : <div />;
