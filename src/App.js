@@ -60,7 +60,7 @@ function App () {
   return (
     <div className="App">
       <h1>NFT Creator</h1>
-      <h4>powered by <a href="bitcoincomputer.io">BitcoinComputer!</a></h4>
+      <h4>powered by <a href="https://docs.bitcoincomputer.io/">BitcoinComputer</a></h4>
       <h2>My Wallet</h2>
       <b>Address</b>&nbsp;{computer.db.wallet.getAddress ().toString ()}<br />
       <b>Public Key</b>
