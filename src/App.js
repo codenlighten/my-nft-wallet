@@ -73,7 +73,17 @@ function App () {
       {' '}
       {computer.db.wallet.restClient.chain}
       <br />
-      <button type="submit" onClick={() => setComputer (new Computer ())}>
+      <button
+        type="submit"
+        onClick={() =>
+          setComputer (
+            new Computer ({
+              seed: '',
+              chain: 'BSV',
+              network: 'testnet',
+            })
+          )}
+      >
         Generate New Wallet
       </button>
 
